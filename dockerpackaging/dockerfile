@@ -1,0 +1,6 @@
+FROM node:14
+WORKDIR ~/power-user
+COPY package*.json ./
+RUN npm install react react-router-dom axios react-icons
+COPY . .
+CMD ["npm", "start"]
