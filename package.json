@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/itsKaori/power-user/issues"
   },
-  "homepage": "https://github.com/itsKaori/power-user#readme",
+  "homepage": "https://github.com/itsKaori/power-user",
   "devDependencies": {
     "@babel/core": "^7.21.5",
     "@babel/preset-env": "^7.21.5",
