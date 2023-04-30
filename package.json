@@ -4,7 +4,7 @@
   "description": "personal website of kaori hall",
   "main": "index.js",
   "scripts": {
-    "test": "ws-test"
+    "test": "mocha ./tests/**/*.test.js ws-test"
   },
   "repository": {
     "type": "git",
