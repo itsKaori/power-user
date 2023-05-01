@@ -1,0 +1,19 @@
+// Define variables for commonly used colors
+$primary-color: #002b36;
+$secondary-color: #073642;
+
+// Define styles for the header
+header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 1rem;
+  text-align: center;
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+}

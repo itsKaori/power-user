@@ -1,5 +1,5 @@
 FROM node:14
-WORKDIR ~/power-user
+WORKDIR /app
 COPY package*.json ./
 RUN npm install react react-router-dom axios react-icons
 COPY . .
