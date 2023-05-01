@@ -1,7 +1,12 @@
+var http = require('http');
 const http = require('http');
 
+const express = require("express")
+const app = express();
 const hostname = '127.0.0.1';
 const port = 3000;
+
+app.use(express.static('public'));
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -9,6 +14,6 @@ const server = http.createServer((req, res) => {
   res.end('Hello World');
 });
 
-server.listen(port, hostname, () => {
+app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
