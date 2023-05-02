@@ -1,12 +1,10 @@
-var http = require('http');
-
-const express = require("express")
+const express = require("express");
 const path = require('path');
 const mime = require('mime');
 const fs = require('fs');
 const app = express();
 const hostname = '127.0.0.1';
-const port = 4000;
+const port = 3000;
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
@@ -28,6 +26,11 @@ const server = http.createServer((req, res) => {
     res.write(data);
     res.end();
   });
+});
+
+// Set the MIME type for CSS files
+mime.define({
+  'text/css': ['css']
 });
 
 app.listen(port, hostname, () => {

@@ -40,12 +40,20 @@ html * {
     border-inline-end: auto;
 }
 
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('public/static/PlayfairDisplay-VariableFont_wght.ttf') format('truetype'),
+       url('public/static/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 // Define styles for the header/navbar
 div {
   background-color: $base3;
-  color: $base01;
+  color: $base1;
+
   padding: 2in;
   text-align: left;
   h1 {
@@ -57,7 +65,7 @@ div {
     margin-top: 1in;
   }
   .greeting {
-    color: $base01;
+    color: $base1;
     font-size: 20pt;
   }
 

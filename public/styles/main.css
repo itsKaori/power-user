@@ -29,13 +29,19 @@ html a, html a:active, html a:visited, .light a, .light a:active, .light a:visit
 }
 
 html * {
-  color-profile: sRGB;
-  rendering-intent: auto;
+  color-scheme: sRGB;
+  border-inline-end: auto;
 }
 
+@font-face {
+  font-family: "Playfair Display";
+  src: url("public/static/PlayfairDisplay-VariableFont_wght.ttf") format("truetype"), url("public/static/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 div {
   background-color: #fdf6e3;
-  color: #586e75;
+  color: #93a1a1;
   padding: 2in;
   text-align: left;
 }
@@ -48,7 +54,7 @@ div p {
   margin-top: 1in;
 }
 div .greeting {
-  color: #586e75;
+  color: #93a1a1;
   font-size: 20pt;
 }
 
