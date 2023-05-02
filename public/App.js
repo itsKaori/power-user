@@ -2,6 +2,7 @@ const express = require("express");
 const path = require('path');
 const mime = require('mime');
 const fs = require('fs');
+const { MIMEType } = require("MIMEType");
 const app = express();
 const hostname = '127.0.0.1';
 const port = 3000;
@@ -12,9 +13,10 @@ app.get('/', function(req, res) {
 
 app.use(express.static('public'));
 
-const server = http.createServer((req, res) => {
-  const filePath = './public' + req.url;
-  const contentType = mime.getType(path.extname(filePath));
+app.get('*', (req, res) => {
+  const filePath = path.join(__dirname, 'public', req.url);
+  const ext = path.extname(filePath);
+  const contentType = MIMEType(ext);
 
   fs.readFile(filePath, (err, data) => {
     if (err) {
@@ -22,16 +24,13 @@ const server = http.createServer((req, res) => {
       res.end(JSON.stringify(err));
       return;
     }
-    res.writeHead(200, { 'Content-Type': contentType });
+    res.writeHead(200, {'Content-Type': contentType});
     res.write(data);
     res.end();
   });
 });
 
-// Set the MIME type for CSS files
-mime.define({
-  'text/css': ['css']
-});
+console.log(__dirname);
 
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);

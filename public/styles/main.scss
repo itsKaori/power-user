@@ -42,8 +42,8 @@ html * {
 
 @font-face {
   font-family: 'Playfair Display';
-  src: url('public/static/PlayfairDisplay-VariableFont_wght.ttf') format('truetype'),
-       url('public/static/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: url('/home/zilbi/power-user/public/static/PlayfairDisplay-VariableFont_wght.ttf') format('truetype'),
+       url('static/PlayfairDisplay-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
