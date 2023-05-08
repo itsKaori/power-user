@@ -1,2 +1,2 @@
-# power-user
-Repo for my website for all of the many things I do
+# UNDER CONSTRUCTION
+We are currently under construction! Check back later.
